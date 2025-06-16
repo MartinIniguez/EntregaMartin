@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Blog</title>
+</head>
+<body>
+    <h1>Blog</h1>
+    <p>{{ mensaje}}</p>
+    <nav>
+        <a href="/autor/">Autor</a> |
+        <a href="/categoria/">Categoría</a> |
+        <a href="/post/">Post</a> |
+        <a href="/buscar/">Buscar</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
