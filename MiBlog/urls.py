@@ -26,5 +26,5 @@ urlpatterns = [
     path('categoria/', views.crear_categoria, name='crear_categoria'),
     path('post/', views.crear_post, name='crear_post'),
     path('buscar/', views.buscar_post, name='buscar_post'),
-    path('prueba/', views.index, name='index'),
+    path('', views.index, name='index'),
 ]
