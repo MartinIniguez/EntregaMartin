@@ -1,30 +1,20 @@
 from django import forms
-from .models import Post, Autor, Categoria
+from .models import Autor, Categoria, Post
 
 class AutorForm(forms.ModelForm):
     class Meta:
         model = Autor
-        fields = ['nombre', 'bio', 'email']
-        widgets = {
-            'bio': forms.Textarea(attrs={'rows': 4, 'cols': 40}),
-        }
+        fields = '__all__'
         
 class CategoriaForm(forms.ModelForm):
     class Meta:
         model = Categoria
-        fields = ['nombre', 'descripcion']
-        widgets = {
-            'descripcion': forms.Textarea(attrs={'rows': 4, 'cols': 40}),
-        }
+        fields =  '__all__'
         
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['titulo', 'contenido', 'autor', 'categorias']
-        widgets = {
-            'contenido': forms.Textarea(attrs={'rows': 10, 'cols': 40}),
-            'categorias': forms.CheckboxSelectMultiple(),
-        }
+        fields =  '__all__'
         
-class BusquedaForm(forms.Form):
+class BusquedaPostForm(forms.Form):
     titulo = forms.CharField(label='Buscar por título', max_length=100, required=False)
