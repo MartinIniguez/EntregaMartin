@@ -35,5 +35,5 @@ def buscar_post(request):
     return render(request, 'Blog/buscar_post.html', {'form': form, 'resultado': resultado})
 
 def index(request):
-    context = {"mensaje": "Bienvenido a Mi Blog"} 
+    context = {"mensaje": "Bienvenido a mi humilde Blog"} 
     return render(request, 'Blog/index.html', context)
