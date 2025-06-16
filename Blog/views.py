@@ -10,20 +10,20 @@ def crear_autor(request):
         form = AutorForm(request.POST or None)
         if form.is_valid():
             form.save()
-            return render(request, 'Blog/autor_creado.html', {'form': form})
+            return render(request, 'Blog/crear_autor.html', {'form': form})
     
 def crear_categoria(request):
    form = CategoriaForm(request.POST or None)
    if form.is_valid():
        form.save()
-       return render(request, 'Blog/categoria_creada.html', {'form': form})
+       return render(request, 'Blog/crear_categoria.html', {'form': form})
    
    
 def crear_post(request):
     form = PostForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return render(request, 'Blog/post_creado.html', {'form': form})
+        return render(request, 'Blog/crear_post.html', {'form': form})
     
     
 def buscar_post(request):
