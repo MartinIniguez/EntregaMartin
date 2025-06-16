@@ -20,8 +20,7 @@ from Blog import views
 
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("", include("Blog.urls")),  # Include the blog app's URLs
+    path("admin/", admin.site.urls),  # Include the blog app's URLs
     path('autor/', views.crear_autor, name='crear_autor'),
     path('categoria/', views.crear_categoria, name='crear_categoria'),
     path('post/', views.crear_post, name='crear_post'),
